@@ -1,0 +1,311 @@
+/* Add Your Styles Here */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* ----------- Main Header ------------*/
+.main-header{
+     background-image: url("images/technology.JPG");
+    background-size: cover;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    text-align: right;
+    text-transform: uppercase;
+    border-bottom: 3px solid darkgreen;
+}
+
+/*---------Main Navigation -------*/
+.main-nav{
+    background-color: greenyellow;
+    overflow: hidden;
+}
+.main-nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.main-nav ul li{
+    float: left;
+}
+.main-nav ul li a{
+    text-decoration: none;
+    color: darkgreen;
+    font-size: 18px;
+    padding: 10px 25px;
+    display: inline-block;
+    transition: .2s linear;
+}
+.main-nav ul li a:hover{
+    background: linear-gradient(darkgreen, #003500)  ;
+    color: greenyellow;
+    padding: 8px 25px;
+    border-radius: 0 0 10px 10px;
+}
+.main-nav ul li a.active{
+    background-color: darkgreen ;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/*----------------------Latest News ----------------*/
+
+.latest-news{
+    background-color: forestgreen;
+    color: white;
+    padding: 7px;
+    font-size: 15px;
+    margin-top: 0px;
+    overflow: hidden;
+    animation: latest-news 2s infinite linear;
+}
+@keyframes latest-news {
+    0%, 50%,100%{background-color: #788365;}
+    25%, 75%{background-color: forestgreen}
+
+}
+.latest-news span{
+    color: red;
+    font-weight: bold;
+    text-shadow: 0px 0px 2px white;
+}
+.latest-news p{
+    margin: 0;
+    animation: news 24s infinite linear;
+}
+@keyframes news {
+    0%{transform: translateX(100%)}
+    100%{transform: translateX(-100%)}
+}
+
+
+.home-news-sec{
+    margin-left: 85px;
+}
+.home-news-art{
+    border: 5px solid gray;
+    border-radius: 15px;
+    width: 350px;
+    float: left;
+    height: 600px;
+    padding: 15px;
+    margin: 5px;
+    text-align: justify;
+    box-shadow: none;
+    transition: 1s all;
+    overflow: hidden;
+}
+.home-news-art:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0,0,0,.8) inset;
+    border: 5px solid lawngreen;
+
+}
+.home-news-art:hover img{
+    transform: scale(.9, .9);
+}
+.home-news-art:hover p{
+    color: darkgreen;
+
+}
+.home-news-art img{
+    width: 100%;
+    transition: 1s all;
+}
+.hom-news-text{
+    padding: 10px;
+}
+
+/*------------break -----*/
+.break{
+    clear: both;
+}
+/* --------Main news section----------*/
+.main-news-section{
+    width: 90%;
+    margin: auto;
+}
+.main-news-article{
+
+}
+.main-news-article h2{
+    color: white;
+    background-color: darkgreen;
+    padding: 5px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 0 10px black;
+}
+.main-news-article p{
+    text-align: justify;
+    font-size: 15px;
+}
+.zoom{
+    width: 600px;
+    height: 300px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 15px black;
+    border:2px solid black
+}
+.zoom img{
+    width: inherit;
+    height: inherit;
+    border-radius: 14px;
+    transition: 2s all ;
+
+}
+.zoom:hover img{
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+
+
+/*---------- Main Fuooter ---------*/
+.main-footer{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+.main-footer small{
+    color: green;
+}
+.main-footer small a{
+    color: lawngreen;
+}
+.main-footer h2{
+    padding: 0;
+    margin: 0 0 5px 0;
+}
+.main-footer p{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/*----------------------GALLERY SECTION ---------------*/
+.gallery-section{
+    margin-left: 10px;
+}
+.gallery-article{
+    border: 2px solid black;
+    width: 300px;
+    float: left;
+    text-align: center;
+    margin: 7px;
+    padding: 7px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.gallery-article:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px black;
+}
+.gallery-article img{
+    width: inherit;
+    height: 200px;
+    border-radius: 15px;
+    transition: 1s all;
+}
+.gallery-article:hover img{
+    transform: scale(1.1, 1.1);
+}
+
+
+/*------------ About Section -------------*/
+.about-section{
+    width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+.about-article{
+    background-color: darkgreen;
+    color: white;
+    box-shadow: 5px 5px 3px rgba(0,0,0,.5);
+    padding:10px 15px;
+    border-radius: 15px;
+    margin: 15px 0;
+
+}
+.company-images{
+    text-align: center;
+    animation: move 20s infinite linear;
+
+}
+@keyframes move {
+    0%{transform: translateX(100%)}
+    100%{transform: translateX(-100%)}
+
+}
+.company-images img{
+    width: 250px;
+    height: 140px;
+    margin: 10px 5px;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+
+/*------------Contact Section ----------------*/
+
+
+.contact-section{
+    text-align: center;
+    padding: 20px;
+    background: url("images/web-developer-wallpaper-7.jpg");
+}
+.contact-article{
+    border:5px solid black;
+    width: 400px;
+    margin: auto;
+    background-color: rgba(0,0,0,.5);
+    padding: 15px;
+}
+.contact-article h2{
+    color: white;
+}
+input[type="text"], input[type="email"]{
+    text-align: center;
+    font-size: 18px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-bottom: 3px solid forestgreen;
+    width: 250px;
+    background: none;
+}
+textarea{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-family: Arial;
+    text-align: center;
+    border-bottom: 3px solid forestgreen;
+    width: 250px;
+}
+
+::placeholder{
+
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus{
+    border-color: lightgrey;
+}
+input[type='submit']{
+    background-color: #003500;
+    color: white;
+    cursor: pointer;
+     border-radius: 20px;
+    font-size: 18px;
+    border:none;
+    padding: 10px 25px;
+}
