@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script>(function(e,t,n){var r=e.querySelectorAll("html")[0];r.className=r.className.replace(/(^|\s)no-js(\s|$)/,"$1js$2")})(document,window,0);</script>
+    <style>
+        body{
+            text-align: center;
+            font-family: "Comic Sans MS";
+        }
+        table,th,td{
+            border:1px solid darkgreen;
+            margin: auto;
+            background: linear-gradient(lightgreen, lightgrey);
+            text-align: center;
+        }
+        th,td{
+            padding: 10px;
+        }
+        input[type="file"]{
+            background: green;
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        header h2{
+            color: forestgreen;
+            font-family: Bahnschrift;
+            text-transform: uppercase;
+            font-size: 55px;
+            margin: 0;
+        }
+        header p, footer p{
+            background: linear-gradient(forestgreen, darkgreen);
+            color: white;
+            font-family: Arial;
+            font-weight: bold;
+            text-shadow: 2px 2px 5px darkolivegreen;
+            width: 78.5%;
+            margin: auto;
+            padding:5px 10px;
+            border-radius: 10px 10px 0 0;
+        }
+        #submit, #preview{
+            padding: 10px 20px;
+            border-radius: 25px;
+            color: white;
+            border: none;
+            cursor: pointer;
+
+        }
+        #preview{
+            background: darkolivegreen;
+        }
+        #submit{
+            background: darkgreen;
+        }
+        footer p{
+            border-radius: 0 0 15px 15px ;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <h2>UPLOAD & DISPLAY</h2>
+            <p>Upload any type of document (like image, video, audio, pdf) & display it here.</p>
+        </header>
+        <table style="width:80%">
+          <!--  <tr>
+                <th>UPLOAD FILES</TH>
+                <th>DISPLAY</th>
+            </tr>
+            <tr>
+                <td>
+                    <P>upload your image here</p>
+                    <form>
+                    select a file:<input type="file" accept="image/*" onchange="loadFile(event)"><br>
+                    <input type="submit">
+                    </form>
+                </td>
+                <td><img id="output" width="400" height="200"></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <p>upload your video here</p>
+                    <form>
+                    select file: <input type="file" name="file[]" class="file_multi_video" accept="video/*"><br></br>
+                    <input type="submit">
+                    </form>
+                </td>
+                <td>
+                    <video width="400" height="200" controls style="background: darkgreen">
+                        <source src="" id="video_here">
+                        Your browser does not support HTML5 video.
+                    </video>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>upload your audio here</p>
+                    select a file:<input type="file" id="file" /><br></br>
+                    <input type="submit">
+                    </form>
+                </td>
+                <td>
+                    <audio id="player" width="400" controls>
+                        <source src="" id="audio" />
+                    </audio>
+                </td>
+            </tr>-->
+
+
+
+            <tr>
+                <td>
+                    <p>upload your document here</p>
+                    <form >
+                    <input class="inputfile" id="file" type="file" name="file" data-multiple-caption="{count} files selected" multiple />
+                        <br><br>
+                        <input type="button" value="PREVIEW" onclick="PreviewImage();" id="preview" height=""  />&nbsp;
+                    <input type="submit" id="submit" value="SEARCH">
+                    </form>
+                </td>
+                <td>
+                    <div style="clear:both">
+                        <iframe id="viewer" frameborder="0" scrolling="no" width="100%" height="400"></iframe>
+                    </div><!-- <object width="400" height="400" data="images/Ferret.pdf"></object>-->
+                </td>
+            </tr>
+        </table>
+        <footer>
+            <p>Designed by RAJ</p>
+        </footer>
+    </body>
+
+
+
+    <script>
+
+
+        //docs
+        function PreviewImage() {
+            pdffile=document.getElementById("file").files[0];
+            pdffile_url=URL.createObjectURL(pdffile);
+            $('#viewer').attr('src',pdffile_url);
+        }
+
+
+    </script>
+</html>
